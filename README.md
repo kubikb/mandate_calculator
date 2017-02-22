@@ -1,4 +1,6 @@
 # Dániel Róna's Mandate Calculator
+[![Build Status](https://travis-ci.org/kubikb/mandate_calculator.svg?branch=master)](https://travis-ci.org/kubikb/mandate_calculator)
+
 This repository contains the source code for Dániel Róna's [mandate calculator](https://mandatumkalkulator.herokuapp.com/). For the detailed description of the model, please read the [methodology page](https://mandatumkalkulator.herokuapp.com/methodology).
 
 ## Prerequisites
