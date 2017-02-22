@@ -24,16 +24,16 @@ An example on how to run it:
 from mandate_calculator.model import MandateCalculator, MandateCalculatorException
 import numpy as np
 
-array_of_earlier_results = pd.read_csv("tests/files/results_2014.csv"),
+array_of_earlier_results = pd.read_csv("mandate_calculator/tests/files/results_2014.csv",
+                                       sep=";",
+                                       encoding="UTF-8",
+                                       index_col=[0,1],
+                                       decimal=",").as_matrix()
+array_of_smd_vote_counts = pd.read_csv("mandate_calculator/tests/files/smd_counts_2014.csv",
                                        sep=";",
                                        encoding="UTF-8",
                                        index_col=0,
                                        decimal=",").as_matrix()
-array_of_smd_vote_counts = pd.read_csv("tests/files/smd_counts_2014.csv"),
-                                       sep=";",
-                                       encoding="UTF-8",
-                                       index_col=0,
-                                       decimal=",").as_matrix().flatten()
 array_of_regional_corrections = pd.read_csv("mandate_calculator/tests/files/smd_region.csv",
                                             sep=";",
                                             encoding="UTF-8",
@@ -45,10 +45,11 @@ predicted_ratios = np.array([0.26, 0.34, 0.33, 0.05])
 votes_from_abroad = np.array([1495, 122638, 2926, 574])
 
 model = MandateCalculator(array_of_earlier_results=array_of_earlier_results,
-                          num_smd_votes=array_of_smd_vote_counts,
-                          factual_ratios=factual_ratios,
-                          predicted_ratios=predicted_ratios,
-                          votes_from_abroad=votes_from_abroad)
+                                      num_smd_votes=array_of_smd_vote_counts,
+                                      factual_ratios=factual_ratios,
+                                      predicted_ratios=predicted_ratios,
+                                      votes_from_abroad=votes_from_abroad,
+                                      region_smd_array=array_of_regional_corrections)
 smd_mandates, list_mandates = model.calculate_all_mandates()
 ```
 
