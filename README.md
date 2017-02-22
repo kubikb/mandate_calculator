@@ -1,12 +1,11 @@
 # Dániel Róna's Mandate Calculator
+This repository contains the source code for Dániel Róna's [mandate calculator](https://mandatumkalkulator.herokuapp.com/). For the detailed description of the model, please read the [methodology page](https://mandatumkalkulator.herokuapp.com/methodology).
 
 ## Prerequisites
 1. Python 2.7 and Pip should be installed. On Windows, install Anaconda for Python 2.7 (https://www.continuum.io/downloads) and you'll be ready to roll.
 2. Install the required Python libraries (don't do this if you use Anaconda): `pip install -r requirements.txt`
 
 ## Running it
-### Tests
-Execute `nosetests` in the cloned directory. This will run all the unittests.
 
 ### Mandate calculation
 The `MandateCalculator` class contains all the methods needed to do a calculation. Initialize a `MandateCalculator` object by giving it the following variables:
@@ -50,6 +49,9 @@ model = MandateCalculator(array_of_earlier_results=array_of_earlier_results,
                           votes_from_abroad=votes_from_abroad)
 smd_mandates, list_mandates = model.calculate_all_mandates()
 ```
+
+### Tests
+Execute `nosetests` in the cloned directory. This will run all the unittests.
 
 ### Performance metrics
 You can get some performance metrics by running `python test_speed.py`
