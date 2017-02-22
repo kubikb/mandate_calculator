@@ -1,7 +1,7 @@
 # Mandate Calculator
 [![Build Status](https://travis-ci.org/kubikb/mandate_calculator.svg?branch=master)](https://travis-ci.org/kubikb/mandate_calculator)
 
-This repository contains my Python implementation for the mandate calculator model designed by Dániel Róna [mandate calculator](https://mandatumkalkulator.herokuapp.com/). For the detailed description of the model, please read the [methodology page](https://mandatumkalkulator.herokuapp.com/methodology).
+This repository contains my Python implementation for the [mandate calculator](https://mandatumkalkulator.herokuapp.com/) model designed by Dániel Róna. For the detailed description of the model, please read the [methodology page](https://mandatumkalkulator.herokuapp.com/methodology).
 
 ## Prerequisites
 1. Python 2.7 and Pip should be installed. On Windows, install Anaconda for Python 2.7 (https://www.continuum.io/downloads) and you'll be ready to roll.
